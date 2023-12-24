@@ -2,7 +2,7 @@ This is console based e-commerce application, which has three type of users - Us
 
 Technologies used-
 
-1 java
+1 Java
 2 MySQL
 3 JDBC
 
@@ -13,9 +13,9 @@ Activities that User can perform-
 3 View Products.
 4 Add product to cart.
 5 View cart.
-6 And finally purchase the product.
+6 Purchase the product.(Bill will be displayed after purchase)
 
-Activities that Admin can perform-(for now by default there is one Admin, to login as admin just enter password-> 'admin'.
+Activities that Admin can perform-(For now by default there is one Admin, to login as admin just enter password-> 'admin'.
 
 1 Add new products in the products table.
 2 Check available quantity of any product.
@@ -25,9 +25,11 @@ Activities that Admin can perform-(for now by default there is one Admin, to log
 6 generate bill and display to user.
 
 Activities that a Guest can perform-
+
 1 View available products.
 
 Tables used-
+
 1 products->
 
 create table products(productId int, productName varchar(255) not null,
@@ -48,7 +50,13 @@ productName varchar(255)not null,price float not null , quantity int not null);
 create table orderHistory(userId varchar(255) not null,productId int not null, 
 productName varchar(255)not null,unitPrice float, quantity int not null);
 
-SQL Commands used- select, insert,update
+SQL Commands used- select, insert,update,delete
+
+If you are using this project, Some changes need to do in project-
+
+1 Change the getConnection() parameters as per your pramanters. (package com.eCart.utility -> DatabaseConnector.DBConnection()).
+2 Create database and create tables in your database. (I used MySQL DB).
+
 
 Note- Validation not completed for "InputMismatchException" so enter the choices which application provides.
 
